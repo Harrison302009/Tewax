@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tewax</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body class="home">
+    <nav>
+
+    </nav>
+    <div class="title">
+        <h1>TEWAX</h1>
+    </div>
+    <p id="timer"></p>
+    <script>
+        var timer = document.getElementById("timer");
+        var time = 300;
+        var count = setInterval(function() {
+            var minute1 = Math.floor(time / 60);
+            var second1 = time % 60;
+            var hour1 = Math.floor(time / 3600);
+            if (time <= 0) {
+                clearInterval(count);
+                timer.innerHTML = "TIME UP!!!!!!!!!";
+            } else {
+                timer.innerHTML = `${hour1}:${minute1}:${second1}`;
+            }
+            time -= 1;
+        }, 1000);
+
+    </script>
+</body>
+</html>
