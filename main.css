@@ -1,0 +1,22 @@
+.home {
+    background-color: rgb(214, 94, 214);
+}
+.links {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    z-index: 5;
+}
+.links ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 8px 12px;
+}
+.links ul li a {
+    text-decoration: none;
+    color: white;
+}

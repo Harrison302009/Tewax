@@ -5,32 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tewax</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body class="home">
     <nav>
-
+        <div class="links">
+            <ul>
+                <li><a href="./index.html" title="Home">Home</a></li>
+                <li><a href="courses/list-of-courses.html" title="Courses">Courses</a></li>
+            </ul>
+        </div>
     </nav>
     <div class="title">
         <h1 id="tewax">TEWAX</h1>
+        <h3 id="slogan" onmouseover="Brightness()" onmouseout="Dim()">Best Education System Offered Online</h3>
     </div>
-    <p id="timer"></p>
-    <script>
-        var timer = document.getElementById("timer");
-        var time = 120;
-        var count = setInterval(function() {
-            var minute1 = Math.floor(time / 60);
-            var second1 = time % 60;
-            var hour1 = Math.floor(time / 3600);
-            if (time <= 0) {
-                clearInterval(count);
-                timer.innerHTML = "TIME UP!!!!!!!!!";
-            } else {
-                timer.innerHTML = `${hour1}:${minute1}:${second1}`;
-            }
-            time -= 1;
-        }, 1000);
-
-    </script>
 </body>
 </html>
