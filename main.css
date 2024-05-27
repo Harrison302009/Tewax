@@ -1,5 +1,7 @@
 .home {
     background-color: rgb(214, 94, 214);
+    cursor: none;
+    overflow-x: hidden;
 }
 .links {
     display: flex;
@@ -19,4 +21,13 @@
 .links ul li a {
     text-decoration: none;
     color: white;
+    cursor: none;
+}
+
+#cursor {
+    display: flex;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
 }

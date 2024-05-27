@@ -6,8 +6,10 @@
     <title>Courses | Tewax</title>
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="../server.js"></script>
 </head>
 <body class="home">
+    <img src="../icon/cursor.png" alt="cursor" id="cursor">
     <nav>
         <div class="links">
             <ul>
@@ -16,22 +18,19 @@
             </ul>
         </div>
     </nav>
-    <audio src="../music/Parado No Bailao.mp3" autoplay loop></audio>
+    <audio src="../music/Parado No Bailao.mp3" id="parado" loop></audio>
     <p id="timer"></p>
     <div id="body">
         <div id="hour"></div>
         <div id="minute"></div>
         <div id="second"></div>
     </div>
-    <button type="button" id="download">Download</button>
     <script>
         
         var result = document.getElementById("timer");
         var hourDiv = document.getElementById("hour");
         var minuteDiv = document.getElementById("minute");
         var secondDiv = document.getElementById("second");
-        var download = document.getElementById("download");
-        download.download = "../music/Parado No Bailao.mp3"
         var krok = setInterval(() => {
             var time = new Date();
             var seconds = time.getSeconds();
