@@ -1,2 +1,1 @@
-[Bing][1]
-[1]: https://www.bing.com
+[Tewax](https://tewax.vercel.app)
