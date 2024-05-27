@@ -21,3 +21,12 @@
     font-weight: 400;
     font-style: normal;
 }
+
+#provider {
+    text-decoration: none;
+}
+
+::selection {
+    background-color: black;
+    color: white;
+}

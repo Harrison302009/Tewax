@@ -26,3 +26,8 @@
 @keyframes yuff {
     to {background-position: 200% center;}
 }
+
+::selection {
+    background-color: beige;
+    color: peru;
+}
