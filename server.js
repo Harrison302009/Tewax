@@ -3,14 +3,6 @@ function Auto() {
     audio.play();
 }
 
-function MouseRep() {
-    var cursor = document.getElementById("cursor");
-    window.addEventListener("mousemove", (e) => {
-        cursor.style.top = `${e.pageY}px`;
-        cursor.style.left = `${e.pageX}px`
-    })
-}
-
 function StopDrags() {
     var home = document.getElementById("home");
     window.addEventListener("dragstart", (e) => {

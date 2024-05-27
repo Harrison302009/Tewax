@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rancho&family=Reddit+Mono:wght@200..900&family=Shadows+Into+Light&display=swap');
+
 .home {
     background-color: rgb(214, 94, 214);
-    cursor: none;
     overflow-x: hidden;
 }
 .links {
@@ -21,13 +22,4 @@
 .links ul li a {
     text-decoration: none;
     color: white;
-    cursor: none;
-}
-
-#cursor {
-    display: flex;
-    position: absolute;
-    z-index: 9999;
-    top: 0;
-    left: 0;
 }

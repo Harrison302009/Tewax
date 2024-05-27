@@ -13,14 +13,14 @@
     <script src="script.js"></script>
     <script src="server.js"></script>
 </head>
-<body class="home" onload="Auto(), StopDrags()" onmouseover="MouseRep()">
-    <img src="icon/cursor.png" alt="cursor" height="30" width="30" id="cursor" draggable="false">
+<body class="home" onload="Auto(), StopDrags()">
     <audio src="music/Parado No Bailao.mp3" id="parado" loop></audio>
     <nav>
         <div class="links">
             <ul>
-                <li onmouseover="CursorTransformation()" onmouseout="PointerTransformation()"><a href="./" title="Home" id="home">Home</a></li>
-                <li onmouseover="CursorTransformation()" onmouseout="PointerTransformation()"><a href="courses/list-of-courses.html" title="Courses" >Courses</a></li>
+                <li><a href="./" title="Home" id="home" onmouseover="CursorTransformation()" onmouseout="PointerTransformation()">Home</a></li>
+                <li><a href="courses/list-of-courses.html" title="Courses" onmouseover="CursorTransformation()" onmouseout="PointerTransformation()">Courses</a></li>
+                <li onmouseover="CursorTransformation()" onmouseout="PointerTransformation()"><a href="about/about-us.html" title="About Tewax">About Us</a></li>
             </ul>
         </div>
     </nav>
