@@ -50,3 +50,53 @@
     height: 40vw;
     width: 40vw;
 }
+
+.search-bar {
+    display: flex;
+    position: absolute;
+    z-index: 500;
+    top: 20%;
+    left: 0;
+    width: 100%;
+}
+.search {
+    display: none;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(#bb443b 0 0) bottom/0% 2px no-repeat;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: transparent;
+    border-bottom: 1px solid #b63b3b;
+    border-bottom-width: 0;
+    border-bottom-color: red;
+    outline: none;
+    transition: 1s ease-in-out;
+}
+
+.search:hover {
+    background-size: 100% 2px;
+}
+.search:focus {
+    background-size: 100% 2px;
+}
+
+.search::placeholder {
+    font-size: 13px;
+    color: blueviolet;
+}
+.search[type=search] {
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#search-icon {
+    display: flex;
+    position: absolute;
+    z-index: 5;
+    color: red;
+    right: 13%;
+    cursor: pointer;
+}

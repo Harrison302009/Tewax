@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rancho&family=Reddit+Mono:wght@200..900&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
 
 .home {
     background-color: rgb(214, 94, 214);
@@ -7,7 +10,8 @@
 .links {
     display: flex;
     position: fixed;
-    top: 2%;
+    top: 0;
+    left: 0;
     width: 100%;
     flex-direction: row;
     align-items: center;
@@ -23,4 +27,13 @@
 .links ul li a {
     text-decoration: none;
     color: white;
+}
+
+#search-icon {
+    display: flex;
+    position: absolute;
+    z-index: 5;
+    color: red;
+    right: 13%;
+    cursor: pointer;
 }

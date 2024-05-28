@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses | Tewax</title>
     <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="../server.js"></script>
 </head>
 <body class="home">
     <nav>
@@ -15,49 +17,12 @@
                 <li><a href="./list-of-courses.html">Courses</a></li>
                 <li><a href="../about/about-us.html" title="About Tewax">About Us</a></li>
             </ul>
+                <i class="fa fa-search" id="search-icon" onclick="Check()" aria-hidden="true"></i>
         </div>
     </nav>
     <audio src="../music/Parado No Bailao.mp3" id="parado" loop></audio>
-    <p id="timer"></p>
-    <div id="body">
-        <div id="hour"></div>
-        <div id="minute"></div>
-        <div id="second"></div>
+    <div class="search-bar">
+        <input type="search" class="search" id="search" title="Search Courses" placeholder="Search Courses...">
     </div>
-    <script>
-        
-        var result = document.getElementById("timer");
-        var hourDiv = document.getElementById("hour");
-        var minuteDiv = document.getElementById("minute");
-        var secondDiv = document.getElementById("second");
-        var krok = setInterval(() => {
-            var time = new Date();
-            var seconds = time.getSeconds();
-            var minute = time.getMinutes();
-            var hour = time.getHours();
-            var hourRotate = 30 * hour + minute / 2;
-            var minuteRotate = 6 * minute;
-            var secondRotate = 6 * seconds;
-            if (time <= 0) {
-                clearTimeout(krok);
-                result.innerHTML = "TIME UP!!!";
-            } else {
-                result.innerHTML = `${hour}:${minute}:${seconds}`;
-            }
-        }, 1000);
-        setInterval(() => {
-            var time = new Date();
-            var seconds = time.getSeconds();
-            var minute = time.getMinutes();
-            var hour = time.getHours();
-            var hourRotate = 30 * hour + minute / 2;
-            var minuteRotate = 6 * minute;
-            var secondRotate = 6 * seconds;
-            hourDiv.style.transform = `rotate(${hourRotate}deg)`;
-            minuteDiv.style.transform = `rotate(${minuteRotate}deg)`;
-            secondDiv.style.transform = `rotate(${secondRotate}deg)`;
-            secondDiv.style.transition = "1s ease-in-out";
-        }, 1000);
-    </script>
 </body>
 </html>

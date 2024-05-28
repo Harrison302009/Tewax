@@ -29,3 +29,10 @@ function PointerTransformation() {
     cursor.width = "30";
     cursor.height = "30";
 }
+
+function SearchBar() {
+    var search = document.getElementById("search");
+    search.style.display = "flex";
+    search.style.borderBottomWidth = "100%";
+    search.style.transition = "1s ease-in-out";
+}
