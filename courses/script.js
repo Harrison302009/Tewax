@@ -1,4 +1,8 @@
-    function SearchBarC() {
+function Settler() {
+    window.sessionStorage.setItem("flipped", null);
+    console.log(window.sessionStorage.getItem("flipped"));
+}
+function SearchBarC() {
     var search = document.getElementById("search");
     if (search.value === "") {
         search.style.display = "flex";
@@ -25,14 +29,54 @@ function Check() {
     var search = document.getElementById("search");
     search.style.display = "flex"
 }
+function Klam() {
+    var validator = window.sessionStorage.getItem("flipped");
+    console.log(validator);
+    if (validator === "true") {
+        CaretAway()
+    } else if (validator === "false") {
+        FilterCaretSwitch()
+    } else {
+        FilterCaretSwitch()
+    }
+}
+
 function FilterCaretSwitch() {
     var caret = document.getElementById("caret");
     var classList = document.getElementById("allClasses");
-    var smallers = classList.getElementsByTagName("h4");
+    var small = document.getElementById("js1");
+    var smallers = document.getElementById("js2");
+    var smallest = document.getElementById("js3");
     caret.style.transform = "rotate(180deg)";
     caret.style.transition = "0.4s ease-in-out";
     classList.style.height = "100%";
-    smallers.style.display = "flex";
-    classList.style.backgroundColor = "green";
+    small.style.fontSize = "12px";
+    small.style.transition = "0.7 ease-in-out";
+    smallers.style.fontSize = "12px";
+    smallers.style.transition = "0.7s ease-in-out";
+    smallest.style.fontSize = "12px";
+    smallest.style.transition = "0.7s ease-in-out";
+    classList.style.backgroundColor = "wheat";
     classList.style.transition = "1s ease-in-out";
+    window.sessionStorage.setItem("flipped", true);
+}
+
+function CaretAway() {
+    var caret = document.getElementById("caret");
+    var classList = document.getElementById("allClasses");
+    var small = document.getElementById("js1");
+    var smallers = document.getElementById("js2");
+    var smallest = document.getElementById("js3");
+    caret.style.transform = "rotate(0deg)";
+    caret.style.transition = "0.7s ease-in-out";
+    classList.style.height = "0";
+    small.style.fontSize = "0";
+    small.style.transition = "0.7s ease-in-out";
+    smallers.style.fontSize = "0";
+    smallers.style.transition = "0.7s ease-in-out";
+    smallest.style.fontSize = "0";
+    smallest.style.transition = "0.7s ease-in-out";
+    classList.style.backgroundColor = "wheat";
+    classList.style.transition = "1s ease-in-out";
+    window.sessionStorage.setItem("flipped", false);
 }

@@ -9,7 +9,7 @@
     <script src="script.js"></script>
     <script src="../server.js"></script>
 </head>
-<body class="home">
+<body class="home" onload="Settler()">
     <nav>
         <div class="links">
             <ul>
@@ -22,17 +22,17 @@
     </nav>
     <audio src="../music/Parado No Bailao.mp3" id="parado" loop></audio>
     <div class="search-bar">
-        <input type="search" class="search" id="search" title="Search Courses" placeholder="Search Courses..." oninput="SearchBarC()" autocomplete="off" list="">
+        <input type="search" class="search" draggable="false" id="search" title="Search Courses" placeholder="Search Courses..." oninput="SearchBarC()" autocomplete="off" list="">
     </div>
     <div class="courses" id="courses">
         <div class="filter" id="filter">
             <h1>Filter Categories</h1>
             <br>
-            <p onclick="FilterCaretSwitch()">Filter By Class <i class="fa fa-caret-up" id="caret" aria-hidden="true"></i></p>
+            <p onclick="Klam()">Filter By Class <i class="fa fa-caret-up" id="caret" aria-hidden="true"></i></p>
             <div class="allClasses" id="allClasses">
-                <h4>JS1</h4>
-                <h4>JS2</h4>
-                <h4>JS3</h4>
+                <h4 id="js1">JS1</h4>
+                <h4 id="js2">JS2</h4>
+                <h4 id="js3">JS3</h4>
             </div>
         </div>
         <div class="box" id="box">
