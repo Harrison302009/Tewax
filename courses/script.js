@@ -25,3 +25,14 @@ function Check() {
     var search = document.getElementById("search");
     search.style.display = "flex"
 }
+function FilterCaretSwitch() {
+    var caret = document.getElementById("caret");
+    var classList = document.getElementById("allClasses");
+    var smallers = classList.getElementsByTagName("h4");
+    caret.style.transform = "rotate(180deg)";
+    caret.style.transition = "0.4s ease-in-out";
+    classList.style.height = "100%";
+    smallers.style.display = "flex";
+    classList.style.backgroundColor = "green";
+    classList.style.transition = "1s ease-in-out";
+}
