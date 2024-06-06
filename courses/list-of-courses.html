@@ -22,7 +22,20 @@
     </nav>
     <audio src="../music/Parado No Bailao.mp3" id="parado" loop></audio>
     <div class="search-bar">
-        <input type="search" class="search" id="search" title="Search Courses" placeholder="Search Courses..." oninput="SearchBarC()">
+        <input type="search" class="search" id="search" title="Search Courses" placeholder="Search Courses..." oninput="SearchBarC()" autocomplete="off" list="">
+    </div>
+    <div class="courses" id="courses">
+        <div class="filter" id="filter">
+            <h1>Filter Categories</h1>
+        </div>
+        <div class="box" id="box">
+            <div class="image" id="image">
+                <img src="courses-images/physics.jpg" alt="Physics" id="physicsImage">
+            </div>
+            <div class="contents" id="contents">
+                <h1 id="looker">Physics Online Course For Beginners</h1>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rancho&family=Reddit+Mono:wght@200..900&family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 .home {
     background-color: rgb(214, 94, 214);
@@ -28,4 +28,26 @@
     text-decoration: none;
     color: white;
 }
+@media (max-width: 768px) {
+    .links ul li a {
+        font-size: 11px;
+    }
+}
 
+@media (width: 2560px) {
+    .links {
+        height: 140px;
+    }
+    .links ul li {
+        padding: 17px 29px;
+    }
+    .links ul li a {
+        font-size: 50px;
+    }
+    #search-icon {
+        font-size: 50px;
+    }
+    .search::placeholder {
+        font-size: 50px;
+    }
+}

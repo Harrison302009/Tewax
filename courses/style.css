@@ -92,6 +92,15 @@
     font-weight: 400;
     font-style: normal;
 }
+.search[type=search]::selection {
+    background-color: #2e2e2e;
+    color: #bb443b;
+}
+.search[type=search]::spelling-error {
+    text-decoration: darkgreen;
+    color: #bb443b;
+    background-color: aquamarine;
+}
 #search-icon {
     display: flex;
     position: absolute;
@@ -99,4 +108,142 @@
     color: red;
     right: 13%;
     cursor: pointer;
+}
+
+.courses {
+    display: flex;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+.box {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    gap: 4px;
+    box-shadow: 0 0 10px #bb443b;
+    border: 1px solid;
+    border-color: transparent;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+.box:hover {
+    transition: 0.3s ease-in-out;
+    border-color: #2e2e2e;
+}
+
+#physicsImage {
+    display: flex;
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+#looker {
+    font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+@media (max-width: 320px) {
+    .courses {
+        display: flex;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        width: 100%;
+    }
+    .box {
+        display: flex;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #looker {
+        font-size: 15px;
+    }
+    #physicsImage {
+        display: flex;
+        position: relative;
+        height: 90px;
+        width: 90px;
+    }
+    #search-icon {display: none;}
+    .search {
+        display: flex;
+    }
+}
+
+@media (max-width: 425px) {
+    .courses {
+        display: flex;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        width: 100%;
+    }
+    .box {
+        display: flex;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #looker {
+        font-size: 15px;
+    }
+    #physicsImage {
+        display: flex;
+        position: relative;
+        height: 90px;
+        width: 90px;
+    }   
+}
+@media (max-width: 768px) {
+    .courses {
+        display: flex;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        width: 100%;
+    }
+    #physicsImage {
+        display: flex;
+        position: relative;
+        height: 175px;
+        width: 175px;
+    }   
+}
+
+@media (width: 2560px) {
+    .search::placeholder {
+        font-size: 50px;
+    }
+    .search[type=search] {
+        font-size: 50px;
+    }
+    .courses {
+        display: flex;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        width: 100%;
+    }
+    .box {
+        display: flex;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #looker {
+        font-size: 50px;
+    }
+    #physicsImage {
+        display: flex;
+        position: relative;
+        height: 300px;
+        width: 300px;
+    } 
 }
