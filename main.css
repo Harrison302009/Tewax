@@ -29,11 +29,3 @@
     color: white;
 }
 
-#search-icon {
-    display: flex;
-    position: absolute;
-    z-index: 5;
-    color: red;
-    right: 13%;
-    cursor: pointer;
-}
