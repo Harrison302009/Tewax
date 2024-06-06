@@ -84,10 +84,11 @@
 }
 
 .search::placeholder {
-    font-size: 13px;
+    font-size: 19px;
     color: blueviolet;
 }
 .search[type=search] {
+    font-size: 19px;
     font-family: "Didact Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -100,6 +101,12 @@
     text-decoration: darkgreen;
     color: #bb443b;
     background-color: aquamarine;
+}
+
+.searchForm {
+    display: flex;
+    position: relative;
+    width: 100%;
 }
 #search-icon {
     display: flex;
@@ -115,6 +122,8 @@
     position: absolute;
     left: 0;
     top: 30%;
+    width: 100%;
+    background-color: white;
 }
 .box {
     display: flex;
@@ -123,24 +132,25 @@
     gap: 4px;
     box-shadow: 0 0 10px #bb443b;
     border: 1px solid;
+    font-size: 12px;
     border-color: transparent;
     transition: 0.3s ease-in-out;
+    background-color: rgba(128, 128, 128, 0.363);
     width: 100%;
-    height: 100%;
 }
 .box:hover {
     transition: 0.3s ease-in-out;
     border-color: #2e2e2e;
-    box-shadow: 0 0 10ox #000;
+    box-shadow: 0 0 10px #000;
 }
 
-#physicsImage {
+.physicsImage {
     display: flex;
     position: relative;
     height: 200px;
     width: 200px;
 }
-#looker {
+.looker {
     font-family: "Roboto Condensed", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -150,9 +160,13 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    width: 42%;
+    width: 32%;
     height: 100vh;
     background-color: wheat;
+}
+.filter p {
+    width: fit-content;
+    cursor: pointer;
 }
 .allClasses {
     display: flex;
@@ -176,7 +190,39 @@
 .allClasses h4:hover {
     border-color: black;
 }
-@media (max-width: 320px) {
+.tags {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    gap: 5px;
+    bottom: 0;
+}
+.tags h5 {
+    display: flex;
+    position: relative;
+    background-color: #bb443b;
+    color: aqua;
+    height: 40px;
+    width: 60px;
+    font-size: 13px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+.tags h5:hover {
+    transition: background-color 0.5s ease-in-out;
+    background-color: #853131;
+}
+.contain {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    font-size: 0;
+}
+@media (width: 320px) {
     .courses {
         display: flex;
         position: absolute;
@@ -194,7 +240,7 @@
     #looker {
         font-size: 15px;
     }
-    #physicsImage {
+    .physicsImage {
         display: flex;
         position: relative;
         height: 90px;
@@ -203,6 +249,9 @@
     #search-icon {display: none;}
     .search {
         display: flex;
+    }
+    .filter {
+        display: none;
     }
 }
 
@@ -230,6 +279,13 @@
         height: 90px;
         width: 90px;
     }   
+    .filter {
+        display: none;
+    }.tags h5 {
+        height: 23px;
+        width: 40px;
+        font-size: 8px;
+    }
 }
 @media (max-width: 768px) {
     .courses {
@@ -245,6 +301,9 @@
         height: 175px;
         width: 175px;
     }   
+    .filter {
+        display: none;
+    }
 }
 
 @media (width: 2560px) {

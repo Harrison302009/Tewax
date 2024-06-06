@@ -9,7 +9,7 @@
     <script src="script.js"></script>
     <script src="../server.js"></script>
 </head>
-<body class="home" onload="Settler()">
+<body class="home" onload="Settler(), Search_Courses()">
     <nav>
         <div class="links">
             <ul>
@@ -22,7 +22,9 @@
     </nav>
     <audio src="../music/Parado No Bailao.mp3" id="parado" loop></audio>
     <div class="search-bar">
-        <input type="search" class="search" draggable="false" id="search" title="Search Courses" placeholder="Search Courses..." oninput="SearchBarC()" autocomplete="off" list="">
+        <form action="" id="searchForm" class="searchForm">
+            <input type="search" class="search" draggable="false" id="search" title="Search Courses" placeholder="Search Courses..." oninput="SearchBarC()" autocomplete="off" list="">
+        </form>
     </div>
     <div class="courses" id="courses">
         <div class="filter" id="filter">
@@ -35,12 +37,42 @@
                 <h4 id="js3">JS3</h4>
             </div>
         </div>
-        <div class="box" id="box">
-            <div class="image" id="image">
-                <img src="courses-images/physics.jpg" alt="Physics" id="physicsImage">
+        <div class="contain" id="contain">
+            <div class="box" id="box">
+                <div class="image" id="image">
+                    <img src="courses-images/physics.jpg" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
+                </div>
+                <div class="contents" id="contents">
+                    <h1 id="looker" class="looker">Physics Online Course For Beginners</h1>
+                    <div class="tags" id="tags">
+                        <h5>Beginners</h5>
+                        <h5>Free</h5>
+                    </div>
+                </div>
             </div>
-            <div class="contents" id="contents">
-                <h1 id="looker">Physics Online Course For Beginners</h1>
+            <div class="box" id="box">
+                <div class="image" id="image">
+                    <img src="courses-images/chemistry.jpg" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
+                </div>
+                <div class="contents" id="contents">
+                    <h1 id="looker" class="looker">Chemistry Online Course For Beginners</h1>
+                    <div class="tags" id="tags">
+                        <h5>Beginners</h5>
+                        <h5>Free</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="box">
+                <div class="image" id="image">
+                    <img src="courses-images/biology.jpg" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
+                </div>
+                <div class="contents" id="contents">
+                    <h1 id="looker" class="looker">Biology Online Course For Beginners</h1>
+                    <div class="tags" id="tags">
+                        <h5>Beginners</h5>
+                        <h5>Free</h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

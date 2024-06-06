@@ -1,6 +1,11 @@
 function Settler() {
+    var former = document.getElementById("searchForm");
     window.sessionStorage.setItem("flipped", null);
     console.log(window.sessionStorage.getItem("flipped"));
+    former.addEventListener("submit", (e) => {
+        e.preventDefault();
+    })
+
 }
 function SearchBarC() {
     var search = document.getElementById("search");
@@ -79,4 +84,57 @@ function CaretAway() {
     classList.style.backgroundColor = "wheat";
     classList.style.transition = "1s ease-in-out";
     window.sessionStorage.setItem("flipped", false);
+}
+function Search_Courses() {
+    const search_items = [
+        {
+            id: "physics",
+            image: "courses-images/physics.jpg",
+            title: "Physics Online Course For Beginners",
+            level: "Beginner",
+            search_term: "physics",
+            plan: "Free",
+        },
+        {
+            id: "chemistry",
+            image: "courses-images/chemistry.jpg",
+            title: "Chemistry Online Course For Beginners",
+            level: "Beginner",
+            search_term: "chemistry",
+            plan: "Free",
+        },
+        {
+            id: "biology",
+            image: "courses-images/biology.jpg",
+            title: "Biology Online Course For Beginners",
+            level: "Beginner",
+            search_term: "biology",
+            plan: "Free",
+        }
+    ]
+    const categories = [...new Set(search_items.map((item) => {return item}))];
+    document.getElementById("searchForm").addEventListener("submit", (e) => {
+        var data = document.getElementById("search").value.toLowerCase();
+        var filter = categories.filter((item) => {
+            return item.search_term.toLocaleLowerCase().includes(data);
+        })
+        displayItem(filter);
+    })
+    const displayItem = (items) => {
+        document.getElementById("contain").innerHTML = items.map(item => {
+            var {image, title, level, plan} = item;
+            return `<div class="box">
+                        <div class="image" id="image">
+                            <img src="${image}" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
+                        </div>
+                        <div class="contents" id="contents">
+                            <h1 id="looker" class="looker">${title}</h1>
+                            <div class="tags" id="tags">
+                                <h5>${level}</h5>
+                                <h5>${plan}</h5>
+                            </div>
+                        </div>
+                    </div>`
+        })
+    }
 }

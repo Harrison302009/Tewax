@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 100vh;
+    overflow-y: hidden;
+    justify-content: center;
+    flex-direction: column;
+    animation: switcher 3s ;
+    background-color: peru;
+}
+#movingSlogans {
+    display: flex;
+    position: relative;
+    background: linear-gradient(-222deg, red 0%, aqua 15%, peru 25%, coral 48%, beige 54%, bisque 67%, saddlebrown 78%, rebeccapurple 100%);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    animation: Fro 1s linear infinite;
+}
+#loader {
+    display: flex;
+    position: absolute;
+    top: 61%;
+    left: 50%;
+}
+@keyframes Fro {
+    to {background-position: 200% center;}
+}
+@keyframes switcher {
+    from {background-color: rgb(214, 94, 214);}
+    to {background-color: peru;}
+}
