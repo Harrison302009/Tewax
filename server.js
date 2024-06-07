@@ -30,3 +30,15 @@ function PointerTransformation() {
     cursor.height = "30";
 }
 
+function Opaque() {
+    var links = document.getElementById("links");
+    window.addEventListener("scroll", () => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            links.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+            links.style.transition = "0.4s ease-in-out";
+        } else {
+            links.style.backgroundColor = "rgb(0, 0, 0)";
+            links.style.transition = "0.4s ease-in-out";
+        }
+    })
+}

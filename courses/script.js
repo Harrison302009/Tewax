@@ -1,5 +1,7 @@
 function Settler() {
     var former = document.getElementById("searchForm");
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
     window.sessionStorage.setItem("flipped", null);
     console.log(window.sessionStorage.getItem("flipped"));
     former.addEventListener("submit", (e) => {
@@ -110,6 +112,22 @@ function Search_Courses() {
             level: "Beginner",
             search_term: "biology",
             plan: "Free",
+        },
+        {
+            id: "mathematics",
+            image: "courses-images/mathematics.jpg",
+            title: "Mathematics Intermediary Course",
+            level: "Intermediate",
+            search_term: "maths, mathematics",
+            plan: "Free",
+        },
+        {
+            id: "physics",
+            image: "courses-images/physics1.jpg",
+            title: "Physics Intermediary Course",
+            level: "Intermediate",
+            search_term: "physics",
+            plan: "Free",
         }
     ]
     const categories = [...new Set(search_items.map((item) => {return item}))];
@@ -118,7 +136,14 @@ function Search_Courses() {
         var filter = categories.filter((item) => {
             return item.search_term.toLocaleLowerCase().includes(data);
         })
-        displayItem(filter);
+        if (document.getElementById("search").value.includes(filter)) {
+            document.getElementById("contain").innerHTML = "<h1 style='color: black; font-size: 50px;'>Search Results Not Found</h1>";
+            console.log("unnoticed");
+            
+        } else {
+            console.log("running");
+            displayItem(filter);
+        }
     })
     const displayItem = (items) => {
         document.getElementById("contain").innerHTML = items.map(item => {
