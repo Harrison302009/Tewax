@@ -44,8 +44,8 @@ function Klam() {
         CaretAway()
     } else if (validator === "false") {
         FilterCaretSwitch()
-    } else {
-        FilterCaretSwitch()
+    } else if (validator === "null") {
+        FilterCaretSwitch();
     }
 }
 
@@ -67,6 +67,25 @@ function FilterCaretSwitch() {
     classList.style.backgroundColor = "wheat";
     classList.style.transition = "1s ease-in-out";
     window.sessionStorage.setItem("flipped", true);
+        if (window.localStorage.getItem('classPicked') === "js1") {
+            console.log("Class Picked, JS1")
+            small.style.backgroundColor = "#6ab6e2";
+            smallers.style.backgroundColor = "transparent";
+            smallest.style.backgroundColor = "transparent";
+        } else if (window.localStorage.getItem('classPicked') === "js2") {
+            console.log("classPicked: JS2");
+            small.style.backgroundColor = "transparent";
+            smallers.style.backgroundColor = "#6ab6e2";
+            smallest.style.backgroundColor = "transparent";
+        } else if (window.localStorage.getItem('classPicked') === "js3") {
+            console.log("classPicked: JS3");
+            small.style.backgroundColor = "transparent";
+            smallers.style.backgroundColor = "transparent";
+            smallest.style.backgroundColor = "#6ab6e2";
+        } else {
+            console.warn("No class picked");
+            console.log("Please pick a class");
+        }
 }
 
 function CaretAway() {
@@ -87,11 +106,16 @@ function CaretAway() {
     classList.style.backgroundColor = "wheat";
     classList.style.transition = "1s ease-in-out";
     window.sessionStorage.setItem("flipped", false);
+    setTimeout(() => {
+        small.style.backgroundColor = "transparent";
+        smallers.style.backgroundColor = "transparent";
+        smallest.style.backgroundColor = "transparent";
+    }, 600);
 }
 function Search_Courses() {
     const search_items = [
         {
-            id: "physics",
+            id: "Physics Beginner",
             image: "courses-images/physics.jpg",
             title: "Physics Online Course For Beginners",
             level: "Beginner",
@@ -99,7 +123,7 @@ function Search_Courses() {
             plan: "Free",
         },
         {
-            id: "chemistry",
+            id: "Chemistry Beginner",
             image: "courses-images/chemistry.jpg",
             title: "Chemistry Online Course For Beginners",
             level: "Beginner",
@@ -107,7 +131,7 @@ function Search_Courses() {
             plan: "Free",
         },
         {
-            id: "biology",
+            id: "Biology Beginner",
             image: "courses-images/biology.jpg",
             title: "Biology Online Course For Beginners",
             level: "Beginner",
@@ -115,7 +139,7 @@ function Search_Courses() {
             plan: "Free",
         },
         {
-            id: "mathematics",
+            id: "Mathematics Intermediary",
             image: "courses-images/mathematics.jpg",
             title: "Mathematics Intermediary Course",
             level: "Intermediate",
@@ -123,13 +147,37 @@ function Search_Courses() {
             plan: "Free",
         },
         {
-            id: "physics",
+            id: "Physics Intermediary",
             image: "courses-images/physics1.jpg",
             title: "Physics Intermediary Course",
             level: "Intermediate",
             search_term: "physics",
             plan: "Free",
-        }
+        },
+        {
+            id: "Mathematics Beginner",
+            image: "courses-images/maths1.jpg",
+            title: "Mathematics Online Course For Beginners",
+            level: "Beginner",
+            search_term: "mathematics, maths",
+            plan: "Free",
+        },
+        {
+            id: "English Beginner",
+            image: "courses-images/english2.jpg",
+            title: "English Online Course For Beginners",
+            level: "Beginner",
+            search_term: "english",
+            plan: "Free",
+        },
+        {
+            id: "Agricultural Science Intermediary",
+            image: "courses-images/agriculture2.jpg",
+            title: "Agricultural Science Intermediary Course",
+            level: "Intermediate",
+            search_term: "agricultural science, agriculture",
+            plan: "Free",
+        },
     ]
     const categories = [...new Set(search_items.map((item) => {return item}))];
     document.getElementById("searchForm").addEventListener("submit", (e) => {
@@ -289,7 +337,7 @@ function JS2Filtration() {
                                 <img
                                     src="courses-images/agriculture2.jpg"
                                     draggable="false"
-                                    alt="English"
+                                    alt="Agricultural Science Intermediary"
                                     id="physicsImage"
                                     class="physicsImage"
                                 />
@@ -305,7 +353,62 @@ function JS2Filtration() {
     js1.style.backgroundColor = "transparent";
     js2.style.backgroundColor = "#6ab6e2";
     js3.style.backgroundColor = "transparent";
+    document.getElementById("searchForm").addEventListener("submit", (a) => {
+        a.preventDefault();
+        JS2and3Search();
+    })
     CaretAway();
+}
+function JS2and3Search() {
+    var container = document.getElementById("contain");
+    var courses = [
+        {
+            id: "Mathematics Intermediary",
+            image: "courses-images/mathematics.jpg",
+            title: "Mathematics Intermeiary Course",
+            level: "Intermediate",
+            search_term: "mathematics, maths",
+            plan: "Free",
+        },
+        {
+            id: "Agricultural Science Intermediary",
+            image: "courses-images/agriculture2.jpg",
+            title: "Agricultural Science Intermediary Course",
+            level: "Intermediate",
+            search_term: "agricutlral science, agriculture",
+            plan: "Free",
+        },
+    ]
+    const categories = [...new Set(courses.map((item) => {return item}))];
+    document.getElementById("searchForm").addEventListener("submit", (e) => {
+        var data = document.getElementById("search").value.toLowerCase();
+        var filter = categories.filter((item) => {
+            return item.search_term.toLocaleLowerCase().includes(data);
+        })
+        if (document.getElementById("search").value.includes(filter)) {
+            console.log("Unrecognized");
+            container.innerHTML = `<h1 style="color: black; font-size: 50px;">No Search Results Found For ${document.getElementById("search").value}</h1>`;
+        } else {
+            displayItem(filter);
+        }
+    })
+    const displayItem = (items) => {
+        document.getElementById("contain").innerHTML = items.map((item) => {
+            var {id, image, title, plan, level} = item;
+            return `<div class="box">
+                        <div class="image" id="image">
+                            <img src="${image}" draggable="false" alt="${id}" id="physicsImage" class="physicsImage">
+                        </div>
+                        <div class="contents" id="contents">
+                            <h1 id="looker" class="looker">${title}</h1>
+                            <div class="tags" id="tags">
+                                <h5>${level}</h5>
+                                <h5>${plan}</h5>
+                            </div>
+                        </div>
+                    </div>`
+        })
+    }
 }
 
 function StopAllVariations() {
