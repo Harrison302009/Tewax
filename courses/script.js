@@ -3,6 +3,7 @@ function Settler() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     window.sessionStorage.setItem("flipped", null);
+    window.localStorage.setItem('classPicked', null);
     console.log(window.sessionStorage.getItem("flipped"));
     former.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -162,4 +163,191 @@ function Search_Courses() {
                     </div>`
         })
     }
+}
+function JS1Filteration() {
+    window.localStorage.setItem('classPicked', 'js1');
+    var js1 = document.getElementById('js1');
+    var js2 = document.getElementById('js2');
+    var js3 = document.getElementById('js3');
+    var container = document.getElementById('contain');
+    container.innerHTML = `<div class="box" id="box">
+                                <div class="image" id="image">
+                                    <img src="courses-images/physics.jpg" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
+                                </div>
+                                <div class="contents" id="contents">
+                                    <h1 id="looker" class="looker">Physics Online Course For Beginners</h1>
+                                    <div class="tags" id="tags">
+                                        <h5>Beginner</h5>
+                                        <h5>Free</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                    <img src="courses-images/chemistry.jpg" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
+                                </div>
+                                <div class="contents" id="contents">
+                                    <h1 id="looker" class="looker">Chemistry Online Course For Beginners</h1>
+                                    <div class="tags" id="tags">
+                                        <h5>Beginner</h5>
+                                        <h5>Free</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                    <img src="courses-images/biology.jpg" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
+                                </div>
+                                <div class="contents" id="contents">
+                                    <h1 id="looker" class="looker">Biology Online Course For Beginners</h1>
+                                    <div class="tags" id="tags">
+                                        <h5>Beginner</h5>
+                                        <h5>Free</h5>
+                                    </div>
+                                </div>
+                            </div>`;
+    js1.style.backgroundColor = "#6ab6e2";
+    js2.style.backgroundColor = "transparent";
+    js3.style.backgroundColor = "transparent";
+}
+function JS2Filtration() {
+    window.localStorage.setItem('classPicked', 'js2');
+    var js1 = document.getElementById('js1');
+    var js2 = document.getElementById('js2');
+    var js3 = document.getElementById('js3');
+    var container = document.getElementById('contain');
+    container.innerHTML = `<div class="box" id="box">
+                                <div class="image" id="image">
+                                    <img src="courses-images/mathematics.jpg" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
+                                </div>
+                                <div class="contents" id="contents">
+                                    <h1 id="looker" class="looker">Mathematics Intermediary Course</h1>
+                                    <div class="tags" id="tags">
+                                        <h5>Intermediate</h5>
+                                        <h5>Free</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                    <img src="courses-images/physics1.jpg" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
+                                </div>
+                                <div class="contents" id="contents">
+                                    <h1 id="looker" class="looker">Physics Intermediary Course</h1>
+                                    <div class="tags" id="tags">
+                                        <h5>Intermediate</h5>
+                                        <h5>Free</h5>
+                                    </div>
+                                </div>
+                            </div>`;
+    js1.style.backgroundColor = "transparent";
+    js2.style.backgroundColor = "#6ab6e2";
+    js3.style.backgroundColor = "transparent";
+}
+
+function StopAllVariations() {
+    var js1 = document.getElementById("js1");
+    var js2 = document.getElementById("js2");
+    var js3 = document.getElementById("js3");
+    var container = document.getElementById("contain");
+    container.innerHTML = `<div class="box" id="box">
+                                <div class="image" id="image">
+                                <img
+                                    src="courses-images/physics.jpg"
+                                    draggable="false"
+                                    alt="Physics"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
+                                </div>
+                                <div class="contents" id="contents">
+                                <h1 id="looker" class="looker">
+                                    Physics Online Course For Beginners
+                                </h1>
+                                <div class="tags" id="tags">
+                                    <h5>Beginner</h5>
+                                    <h5>Free</h5>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                <img
+                                    src="courses-images/chemistry.jpg"
+                                    draggable="false"
+                                    alt="Physics"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
+                                </div>
+                                <div class="contents" id="contents">
+                                <h1 id="looker" class="looker">
+                                    Chemistry Online Course For Beginners
+                                </h1>
+                                <div class="tags" id="tags">
+                                    <h5>Beginner</h5>
+                                    <h5>Free</h5>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                <img
+                                    src="courses-images/biology.jpg"
+                                    draggable="false"
+                                    alt="Physics"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
+                                </div>
+                                <div class="contents" id="contents">
+                                <h1 id="looker" class="looker">
+                                    Biology Online Course For Beginners
+                                </h1>
+                                <div class="tags" id="tags">
+                                    <h5>Beginner</h5>
+                                    <h5>Free</h5>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                <img
+                                    src="courses-images/mathematics.jpg"
+                                    draggable="false"
+                                    alt="Physics"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
+                                </div>
+                                <div class="contents" id="contents">
+                                <h1 id="looker" class="looker">Mathematics Intermediary Course</h1>
+                                <div class="tags" id="tags">
+                                    <h5>Intermediate</h5>
+                                    <h5>Free</h5>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                <img
+                                    src="courses-images/physics1.jpg"
+                                    draggable="false"
+                                    alt="Physics"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
+                                </div>
+                                <div class="contents" id="contents">
+                                <h1 id="looker" class="looker">Physics Intermediary Course</h1>
+                                <div class="tags" id="tags">
+                                    <h5>Intermediate</h5>
+                                    <h5>Free</h5>
+                                </div>
+                                </div>
+                            </div>`;
+    js1.style.backgroundColor = 'transparent';
+    js2.style.backgroundColor = 'transparent';
+    js3.style.backgroundColor = 'transparent';
+    window.localStorage.setItem('classPicked', `cancelled for now`);
 }

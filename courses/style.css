@@ -238,6 +238,16 @@
     right: 0;
     bottom: 0;
 }
+#filterCancel {
+    cursor: pointer;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
 @media (width: 320px) {
     .courses {
         display: flex;
