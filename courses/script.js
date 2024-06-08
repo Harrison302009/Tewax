@@ -170,40 +170,40 @@ function JS1Filteration() {
     var js2 = document.getElementById('js2');
     var js3 = document.getElementById('js3');
     var container = document.getElementById('contain');
-    container.innerHTML = `<div class="box" id="box">
+    container.innerHTML = ` <div class="box" id="box">
                                 <div class="image" id="image">
-                                    <img src="courses-images/physics.jpg" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
+                                <img
+                                    src="courses-images/english2.jpg"
+                                    draggable="false"
+                                    alt="English"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
                                 </div>
                                 <div class="contents" id="contents">
-                                    <h1 id="looker" class="looker">Physics Online Course For Beginners</h1>
-                                    <div class="tags" id="tags">
-                                        <h5>Beginner</h5>
-                                        <h5>Free</h5>
-                                    </div>
+                                <h1 id="looker" class="looker">English Online Course For Beginners</h1>
+                                <div class="tags" id="tags">
+                                    <h5>Beginner</h5>
+                                    <h5>Free</h5>
+                                </div>
                                 </div>
                             </div>
                             <div class="box" id="box">
                                 <div class="image" id="image">
-                                    <img src="courses-images/chemistry.jpg" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
+                                <img
+                                    src="courses-images/maths1.jpg"
+                                    draggable="false"
+                                    alt="Mathematics"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
                                 </div>
                                 <div class="contents" id="contents">
-                                    <h1 id="looker" class="looker">Chemistry Online Course For Beginners</h1>
-                                    <div class="tags" id="tags">
-                                        <h5>Beginner</h5>
-                                        <h5>Free</h5>
-                                    </div>
+                                <h1 id="looker" class="looker">Mathematics Online Course For Beginners</h1>
+                                <div class="tags" id="tags">
+                                    <h5>Beginner</h5>
+                                    <h5>Free</h5>
                                 </div>
-                            </div>
-                            <div class="box" id="box">
-                                <div class="image" id="image">
-                                    <img src="courses-images/biology.jpg" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
-                                </div>
-                                <div class="contents" id="contents">
-                                    <h1 id="looker" class="looker">Biology Online Course For Beginners</h1>
-                                    <div class="tags" id="tags">
-                                        <h5>Beginner</h5>
-                                        <h5>Free</h5>
-                                    </div>
                                 </div>
                             </div>`;
     js1.style.backgroundColor = "#6ab6e2";
@@ -230,14 +230,20 @@ function JS2Filtration() {
                             </div>
                             <div class="box" id="box">
                                 <div class="image" id="image">
-                                    <img src="courses-images/physics1.jpg" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
+                                <img
+                                    src="courses-images/agriculture2.jpg"
+                                    draggable="false"
+                                    alt="English"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
                                 </div>
                                 <div class="contents" id="contents">
-                                    <h1 id="looker" class="looker">Physics Intermediary Course</h1>
-                                    <div class="tags" id="tags">
-                                        <h5>Intermediate</h5>
-                                        <h5>Free</h5>
-                                    </div>
+                                <h1 id="looker" class="looker">Agricultural Science Intermediary Course</h1>
+                                <div class="tags" id="tags">
+                                    <h5>Intermediate</h5>
+                                    <h5>Free</h5>
+                                </div>
                                 </div>
                             </div>`;
     js1.style.backgroundColor = "transparent";
