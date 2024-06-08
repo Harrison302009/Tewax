@@ -138,7 +138,7 @@ function Search_Courses() {
             return item.search_term.toLocaleLowerCase().includes(data);
         })
         if (document.getElementById("search").value.includes(filter)) {
-            document.getElementById("contain").innerHTML = "<h1 style='color: black; font-size: 50px;'>Search Results Not Found</h1>";
+            document.getElementById("contain").innerHTML = `<h1 style='color: black; font-size: 50px;'>No Search Results Found For ${document.getElementById("search").value}</h1>`;
             console.log("unnoticed");
             
         } else {
@@ -209,6 +209,61 @@ function JS1Filteration() {
     js1.style.backgroundColor = "#6ab6e2";
     js2.style.backgroundColor = "transparent";
     js3.style.backgroundColor = "transparent";
+    document.getElementById("searchForm").addEventListener("submit", (o) => {
+        o.preventDefault();
+        JS1Search();
+    })
+}
+function JS1Search() {
+    var container = document.getElementById("contain");
+    var courses = [
+        {
+            id: "english",
+            image: "courses-images/english2.jpg",
+            title: "English Online Course For Beginners",
+            level: "Beginner",
+            search_term: "english",
+            plan: "Free",
+        },
+        {
+            id: "mathematics",
+            image: "courses-images/maths1.jpg",
+            title: "Mathematics Online Course For Beginners",
+            level: "Beginner",
+            search_term: "mathematics, maths",
+            plan: "Free",
+        },
+    ]
+    const categories = [...new Set(courses.map((item) => {return item}))];
+    document.getElementById("searchForm").addEventListener("submit", (e) => {
+        var data = document.getElementById("search").value.toLowerCase();
+        var filter = categories.filter((item) => {
+            return item.search_term.toLocaleLowerCase().includes(data);
+        })
+        if (document.getElementById("search").value.includes(filter)) {
+            console.log("Unrecognized");
+            container.innerHTML = `<h1 style="color: black; font-size: 50px;">No Search Results Found For ${document.getElementById("search").value}</h1>`;
+        } else {
+            displayItem(filter);
+        }
+    })
+    const displayItem = (items) => {
+        document.getElementById("contain").innerHTML = items.map((item) => {
+            var {id, image, title, plan, level} = item;
+            return `<div class="box">
+                        <div class="image" id="image">
+                            <img src="${image}" draggable="false" alt="${id}" id="physicsImage" class="physicsImage">
+                        </div>
+                        <div class="contents" id="contents">
+                            <h1 id="looker" class="looker">${title}</h1>
+                            <div class="tags" id="tags">
+                                <h5>${level}</h5>
+                                <h5>${plan}</h5>
+                            </div>
+                        </div>
+                    </div>`
+        })
+    }
 }
 function JS2Filtration() {
     window.localStorage.setItem('classPicked', 'js2');
@@ -356,4 +411,8 @@ function StopAllVariations() {
     js2.style.backgroundColor = 'transparent';
     js3.style.backgroundColor = 'transparent';
     window.localStorage.setItem('classPicked', `cancelled for now`);
+    document.getElementById("searchForm").addEventListener("submit", (p) => {
+        p.preventDefault();
+        Search_Courses();
+    })
 }
