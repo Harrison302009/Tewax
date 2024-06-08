@@ -209,6 +209,7 @@ function JS1Filteration() {
     js1.style.backgroundColor = "#6ab6e2";
     js2.style.backgroundColor = "transparent";
     js3.style.backgroundColor = "transparent";
+    CaretAway();
     document.getElementById("searchForm").addEventListener("submit", (o) => {
         o.preventDefault();
         JS1Search();
@@ -304,6 +305,7 @@ function JS2Filtration() {
     js1.style.backgroundColor = "transparent";
     js2.style.backgroundColor = "#6ab6e2";
     js3.style.backgroundColor = "transparent";
+    CaretAway();
 }
 
 function StopAllVariations() {
@@ -406,10 +408,65 @@ function StopAllVariations() {
                                     <h5>Free</h5>
                                 </div>
                                 </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                <img
+                                    src="courses-images/maths1.jpg"
+                                    draggable="false"
+                                    alt="Mathematics"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
+                                </div>
+                                <div class="contents" id="contents">
+                                <h1 id="looker" class="looker">Mathematics Online Course For Beginners</h1>
+                                <div class="tags" id="tags">
+                                    <h5>Beginner</h5>
+                                    <h5>Free</h5>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                <img
+                                    src="courses-images/english2.jpg"
+                                    draggable="false"
+                                    alt="English"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
+                                </div>
+                                <div class="contents" id="contents">
+                                <h1 id="looker" class="looker">English Online Course For Beginners</h1>
+                                <div class="tags" id="tags">
+                                    <h5>Beginner</h5>
+                                    <h5>Free</h5>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                <img
+                                    src="courses-images/agriculture2.jpg"
+                                    draggable="false"
+                                    alt="English"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
+                                </div>
+                                <div class="contents" id="contents">
+                                <h1 id="looker" class="looker">Agricultural Science Intermediary Course</h1>
+                                <div class="tags" id="tags">
+                                    <h5>Intermediate</h5>
+                                    <h5>Free</h5>
+                                </div>
+                                </div>
                             </div>`;
     js1.style.backgroundColor = 'transparent';
     js2.style.backgroundColor = 'transparent';
     js3.style.backgroundColor = 'transparent';
+    CaretAway();
     window.localStorage.setItem('classPicked', `cancelled for now`);
     document.getElementById("searchForm").addEventListener("submit", (p) => {
         p.preventDefault();
