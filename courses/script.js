@@ -35,6 +35,8 @@ function SearchBarC() {
 
 function Check() {
     var search = document.getElementById("search");
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
     search.style.display = "flex"
 }
 function Klam() {
@@ -178,6 +180,22 @@ function Search_Courses() {
             search_term: "agricultural science, agriculture",
             plan: "Free",
         },
+        {
+            id: "Civic Education Beginner",
+            image: "courses-images/civic.png",
+            title: "Civic Education Online Course For Beginners",
+            level: "Beginner",
+            search_term: "civic education, civics",
+            plan: "Free",
+        },
+        {
+            id: "Christian Religious Studies Intermediary",
+            image: "courses-images/crs.jpg",
+            title: "Christian Religious Studies Intermediary Course",
+            level: "Intermediate",
+            search_term: "christian religious studies, religion, crs, crk",
+            plan: "Free",
+        }
     ]
     const categories = [...new Set(search_items.map((item) => {return item}))];
     document.getElementById("searchForm").addEventListener("submit", (e) => {
@@ -196,10 +214,10 @@ function Search_Courses() {
     })
     const displayItem = (items) => {
         document.getElementById("contain").innerHTML = items.map(item => {
-            var {image, title, level, plan} = item;
+            var {id, image, title, level, plan} = item;
             return `<div class="box">
                         <div class="image" id="image">
-                            <img src="${image}" draggable="false" alt="Physics" id="physicsImage" class="physicsImage">
+                            <img src="${image}" draggable="false" alt="${id}" id="physicsImage" class="physicsImage">
                         </div>
                         <div class="contents" id="contents">
                             <h1 id="looker" class="looker">${title}</h1>
@@ -253,10 +271,29 @@ function JS1Filteration() {
                                     <h5>Free</h5>
                                 </div>
                                 </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                <img
+                                    src="courses-images/civic.png"
+                                    draggable="false"
+                                    alt="Civic Education Beginner"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
+                                </div>
+                                <div class="contents" id="contents">
+                                <h1 id="looker" class="looker">Civic Education Online Course For Beginners</h1>
+                                <div class="tags" id="tags">
+                                    <h5>Beginner</h5>
+                                    <h5>Free</h5>
+                                </div>
+                                </div>
                             </div>`;
     js1.style.backgroundColor = "#6ab6e2";
     js2.style.backgroundColor = "transparent";
     js3.style.backgroundColor = "transparent";
+    document.getElementById("search").value = "";
     CaretAway();
     document.getElementById("searchForm").addEventListener("submit", (o) => {
         o.preventDefault();
@@ -280,6 +317,14 @@ function JS1Search() {
             title: "Mathematics Online Course For Beginners",
             level: "Beginner",
             search_term: "mathematics, maths",
+            plan: "Free",
+        },
+        {
+            id: "Civic Education Beginner",
+            image: "courses-images/civic.png",
+            title: "Civic Education Online Course For Beginners",
+            level: "Beginner",
+            search_term: "civic education, civics",
             plan: "Free",
         },
     ]
@@ -349,10 +394,29 @@ function JS2Filtration() {
                                     <h5>Free</h5>
                                 </div>
                                 </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                <img
+                                    src="courses-images/crs.jpg"
+                                    draggable="false"
+                                    alt="Christian Religious Knowledge Intermediary"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
+                                </div>
+                                <div class="contents" id="contents">
+                                <h1 id="looker" class="looker">Christian Religious Knowledge Intermediary Course</h1>
+                                <div class="tags" id="tags">
+                                    <h5>Intermediate</h5>
+                                    <h5>Free</h5>
+                                </div>
+                                </div>
                             </div>`;
     js1.style.backgroundColor = "transparent";
     js2.style.backgroundColor = "#6ab6e2";
     js3.style.backgroundColor = "transparent";
+    document.getElementById("search").value = "";
     document.getElementById("searchForm").addEventListener("submit", (a) => {
         a.preventDefault();
         JS2and3Search();
@@ -375,7 +439,15 @@ function JS2and3Search() {
             image: "courses-images/agriculture2.jpg",
             title: "Agricultural Science Intermediary Course",
             level: "Intermediate",
-            search_term: "agricutlral science, agriculture",
+            search_term: "agricultral science, agriculture",
+            plan: "Free",
+        },
+        {
+            id: "Christian Religious Studies",
+            image: "courses-images/crs.jpg",
+            title: "Christian Religious Studies Intermediary Course",
+            level: "Intermediate",
+            search_term: "christian religious studies, religion, crs, crk",
             plan: "Free",
         },
     ]
@@ -565,10 +637,47 @@ function StopAllVariations() {
                                     <h5>Free</h5>
                                 </div>
                                 </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                <img
+                                    src="courses-images/civic.png"
+                                    draggable="false"
+                                    alt="Civic Education Beginner"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
+                                </div>
+                                <div class="contents" id="contents">
+                                <h1 id="looker" class="looker">Civic Education Online Course For Beginners</h1>
+                                <div class="tags" id="tags">
+                                    <h5>Beginner</h5>
+                                    <h5>Free</h5>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="box" id="box">
+                                <div class="image" id="image">
+                                <img
+                                    src="courses-images/crs.jpg"
+                                    draggable="false"
+                                    alt="Christian Religious Knowledge Intermediary"
+                                    id="physicsImage"
+                                    class="physicsImage"
+                                />
+                                </div>
+                                <div class="contents" id="contents">
+                                <h1 id="looker" class="looker">Christian Religious Knowledge Intermediary Course</h1>
+                                <div class="tags" id="tags">
+                                    <h5>Intermediate</h5>
+                                    <h5>Free</h5>
+                                </div>
+                                </div>
                             </div>`;
     js1.style.backgroundColor = 'transparent';
     js2.style.backgroundColor = 'transparent';
     js3.style.backgroundColor = 'transparent';
+    document.getElementById("search").value = "";
     CaretAway();
     window.localStorage.setItem('classPicked', `cancelled for now`);
     document.getElementById("searchForm").addEventListener("submit", (p) => {

@@ -161,6 +161,7 @@
     width: 200px;
 }
 .looker {
+    cursor: pointer;
     font-family: "Roboto Condensed", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
