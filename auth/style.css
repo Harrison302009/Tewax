@@ -1,0 +1,94 @@
+.modal {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: #fff;
+    width: 500px;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+.createHome {
+    background-color: rgb(214, 94, 214);
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.modalInputs {
+    width: 80%;
+    outline: none;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+.holder {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    gap: 9px;
+    width: 400px;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(70, 70, 179, 0.521);
+}
+#userP {
+    display: flex;
+    position: relative;
+    font-size: 20px;
+    width: 31px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+#emailP {
+    display: flex;
+    position: relative;
+    font-size: 20px;
+    width: 31px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+#passwordP {
+    display: flex;
+    position: relative;
+    font-size: 20px;
+    width: 31px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+#accountCreate {
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#agreementSpan {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    gap: 10px;
+    color: rgba(73, 73, 73, 0.527);
+}
+#agree[type=checkbox]:checked {
+    accent-color: purple;
+}
+#buttonHolder {
+    display: flex; 
+    position: relative; 
+    width: 100%; 
+    align-items: center; 
+    justify-content: center;
+}
+#createAccount {
+    background: linear-gradient(to bottom right, purple, indigo, blue);
+    border: 2px solid grey;
+    height: 50px;
+    width: 220px;
+    border-radius: 50px;
+}
