@@ -28,6 +28,30 @@
     text-decoration: none;
     color: white;
 }
+#auth {
+    display: flex;
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    flex-direction: row;
+    gap: 19px;
+}
+#auth a {
+    text-decoration: none;
+}
+#auth button {
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: transparent;
+    color: palevioletred;
+    border: 1px solid palevioletred;
+    cursor: pointer;
+}
 @media (max-width: 768px) {
     .links ul li a {
         font-size: 11px;
