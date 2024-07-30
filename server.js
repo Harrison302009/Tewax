@@ -1,6 +1,9 @@
 function Auto() {
     var audio = document.getElementById("parado");
+    audio.muted = false;
     audio.play();
+    audio.autoplay = true;
+    console.log("Parado played");
 }
 
 function StopDrags() {

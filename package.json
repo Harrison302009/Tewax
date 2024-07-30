@@ -1,5 +1,30 @@
 {
   "dependencies": {
     "git": "^0.1.5"
-  }
+  },
+  "name": "tewax",
+  "version": "1.0.0",
+  "description": "An educational website",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "npx serve",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crown-AI/Tewax.git"
+  },
+  "keywords": [
+    "educational",
+    "website",
+    "html",
+    "payware"
+  ],
+  "author": "Crown-AI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Crown-AI/Tewax/issues"
+  },
+  "homepage": "https://github.com/Crown-AI/Tewax#readme"
 }

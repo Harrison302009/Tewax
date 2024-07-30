@@ -13,7 +13,7 @@
     <script src="script.js"></script>
     <script src="../server.js"></script>
   </head>
-  <body class="home" onload="Settler(), Opaque(), Auto()">
+  <body class="home" onload="Settler(), Opaque()" onclick="Auto()">
     <nav>
       <div class="links" id="links">
         <ul>
@@ -42,7 +42,7 @@
       </div>
       </div>
     </nav>
-    <audio src="../music/Parado No Bailao.mp3" id="parado" loop></audio>
+    <audio src="../music/parado.mp3" id="parado" loop></audio>
     <i class="fa fa-arrow-up" aria-hidden="true" id="goUp"></i>
     <div class="search-bar">
       <form action="" id="searchForm" class="searchForm" onsubmit="Search_Courses()">

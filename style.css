@@ -1,4 +1,8 @@
-
+#parado {
+    display: flex;
+    position: relative;
+    z-index: 9999;
+}
 .afterward {
     display: flex;
     position: fixed;
